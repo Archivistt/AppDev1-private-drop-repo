@@ -1,8 +1,12 @@
-# React + Vite
+# React + Vite + Flowbite + Tailwind + Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This simple project uses firebase as its Baas, using addDoc and getDocs to get the documents from the firebase (noSql).
 
-Currently, two official plugins are available:
+## The current status of this project is unfinished but I hope this helps
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Resources used and followed in the making of this project
+
+sample link
+sample link
+sample link
+sample link
