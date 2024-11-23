@@ -4,6 +4,8 @@ This simple project uses firebase as its Baas, using addDoc and getDocs to get t
 
 ## The current status of this project is unfinished but I hope this helps
 
+## if you want to make changes, fork or clone this branch, make your changes and push it in another branch.
+
 ### Resources used and followed in the making of this project
 
 https://transform.tools/html-to-jsx <br>
