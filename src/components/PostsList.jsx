@@ -5,19 +5,6 @@ import { collection, getDocs, onSnapshot } from "firebase/firestore";
 function PostsList() {
   const [posts, setPosts] = useState([{}]);
 
-  // const docs = [
-  //     {
-  //         title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-  //         body:
-  //         "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-  //     },
-  //     {
-  //       title: "HAHAH aut facere repellat provident occaecati excepturi optio reprehenderit",
-  //       body:
-  //       "quia et HAHHAHHA\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-  //   }
-  // ]
-
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "post"), (querySnapshot) => {
       const data = querySnapshot.docs.map((doc) => ({
