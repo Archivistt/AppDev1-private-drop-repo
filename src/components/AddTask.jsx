@@ -2,27 +2,25 @@ import { useState } from "react";
 import { db } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
 
-function AddTask( { tasks }) {
-    const [title, setTitle] = useState('')
-    const [body, setBody] = useState('')
+function AddTask({ tasks }) {
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
 
-    const handlePost = async (event) => {
-        event.preventDefault();
-        
-        try {
-            await addDoc(collection(db, 'post')), {
-                title,
-                body,
-                isRead: false,    
-            }
-            setTitle("")
-            setBody("")
-        }
-        catch {
-            alert('Error adding posts')
-        }
-        
+  const handlePost = async (event) => {
+    event.preventDefault();
+
+    try {
+      await addDoc(collection(db, "post"), {
+        title,
+        body,
+        isRead: false,
+      }),
+        setTitle("");
+        setBody("");
+    } catch {
+      alert("Error adding posts");
     }
+  };
   return (
     <>
       <form className="max-w-sm mx-auto">
@@ -67,7 +65,6 @@ function AddTask( { tasks }) {
         >
           Submit
         </button>
-
       </form>
     </>
   );

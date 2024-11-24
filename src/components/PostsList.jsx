@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, onSnapshot } from "firebase/firestore";
 
 function PostsList() {
   const [posts, setPosts] = useState([{}]);
@@ -19,17 +19,17 @@ function PostsList() {
   // ]
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const querySnapshot = await getDocs(collection(db, "post"));
+    const unsubscribe = onSnapshot(collection(db, "post"), (querySnapshot) => {
       const data = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
       console.log(data);
       setPosts(data);
-    };
+    });
 
-    fetchPosts();
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
   }, []);
 
   return (
