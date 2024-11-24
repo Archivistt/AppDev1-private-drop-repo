@@ -2,7 +2,7 @@
 
 This simple project uses firebase as its Baas, using addDoc and getDocs to get the documents from the firebase (noSql).
 
-## The current status of this project is unfinished but I hope this helps
+## The current status of this project is finished, clone it and try on your own, contact the owner if there are questions.
 
 ## if you want to make changes, fork or clone this branch, make your changes and push it in another branch.
 
