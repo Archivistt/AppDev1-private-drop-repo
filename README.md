@@ -10,7 +10,7 @@ To clone a specific branch, type: <br>
 <li> A simple fetching and adding documents to a collection using firebase as Baas </li><br>
 
 **Double DB Filtering** <br>
-<li> A simple fetching, adding and <b>filtering documents</b>b> data</li><br>
+<li> A simple fetching, adding and <b>filtering documents</b> data</li><br>
 
 
 	
