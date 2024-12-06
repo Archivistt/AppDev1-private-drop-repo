@@ -7,11 +7,9 @@
 ## Steps taken
 *npm install firebase*
 
-## Created fetching data using getDoc logic
-
-## Created adding data using setDoc() function
-
-## Created filtering function
+<li>Created fetching data using getDoc logic</li>
+<li>Created adding data using setDoc() function</li>
+<li>Created filtering function</li>
 It covers two (2) collections: studentList and dayEligible<br>
 **goal**<br>
 <li>To Get the students that are eligible to get a lunch for a certian day</li>
