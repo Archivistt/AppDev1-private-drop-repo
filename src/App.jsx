@@ -42,25 +42,26 @@ function App() {
     const filteredList = (day) => {
 
         // Find the class data for the given day
-        const eligibleClass = classList.find((classItem) => classItem.id === day);
-        console.log(eligibleClass);
+        const eligibleDay = classList.find((classItem) => classItem.id === day);
+        console.log(eligibleDay);
 
         // If there's no data for the selected day, return early
-        if (!eligibleClass) {
+        if (!eligibleDay) {
             console.log(`No classes found for ${day}`);
             return;
         }
+        const eligibleDayKeys = Object.keys(eligibleDay);
+        console.log(eligibleDayKeys);
 
         // Collect all course names that are true for the selected day
-        const eligibleCourses = Object.keys(eligibleClass)
-            .filter((courseKey) => eligibleClass[courseKey] === true)
-            .map((courseKey) => courseKey);  // Get the course name like 'class1', 'class2', etc.
+        const eligibleCourses = eligibleDayKeys
+        .filter((courseKey) => eligibleDay[courseKey] === true); // Get the course name like 'class1', 'class2', etc.
         
         console.log(`Eligible courses for ${day}:`, eligibleCourses);
 
         // Filter students who are enrolled in one of the eligible courses for the day
         const filtered = listStudent.filter((student) => {
-            console.log(`Checking student ${student.name} for course ${student.course}`);
+            // console.log(`Checking student ${student.name} for course ${student.course}`);
             return eligibleCourses.includes(student.course);  // Match student.course to eligible courses
         });
 
